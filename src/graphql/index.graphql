@@ -1,0 +1,10 @@
+type Query {
+  getUser: User
+}
+
+type User {
+  discordId: ID!
+  username: String!
+  avatar: String
+  discriminator: String!
+}
