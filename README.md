@@ -113,7 +113,7 @@ If you add the wrong redirect URI, you will see an "invalid redirect uri" error.
 
 ## DiscordStrategy
 
-In our `src/auth/strategies/index.ts` file, we have created the `DiscordStrategy` class. This class extends `PassportStrategy`. We pass in `Strategy`, which is imported from `passport-discord` so that Nest knows what provider we're working with.
+In our `src/auth/utils/DiscordStrategy.ts` file, we have created the `DiscordStrategy` class. This class extends `PassportStrategy`. We pass in `Strategy`, which is imported from `passport-discord` so that Nest knows what provider we're working with.
 
 ```TS
 import { Profile, Strategy } from 'passport-discord';
@@ -153,7 +153,7 @@ Our `DiscordStrategy` is a provider that will be used by Nest. We invoke the str
 
 ## DiscordAuthGuard
 
-In `src/auth/guards/index.ts` we have:
+In `src/auth/utils/Guards.ts` we have:
 
 ```TS
 @Injectable()

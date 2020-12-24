@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/typeorm';
 import { AuthController } from './controllers/auth/auth.controller';
 import { AuthService } from './services/auth/auth.service';
-import { DiscordStrategy } from './strategies';
+import { DiscordStrategy } from './utils/DiscordStrategy';
 import { SessionSerializer } from './utils/Serializer';
 
 @Module({

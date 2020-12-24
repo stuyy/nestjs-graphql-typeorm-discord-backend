@@ -5,7 +5,7 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { GqlExecutionContext, Query, Resolver } from '@nestjs/graphql';
-import { GraphQLAuthGuard } from 'src/auth/guards';
+import { GraphQLAuthGuard } from 'src/auth/utils/Guards';
 import { AuthenticationProvider } from 'src/auth/services/auth/auth';
 import { User } from 'src/typeorm';
 
