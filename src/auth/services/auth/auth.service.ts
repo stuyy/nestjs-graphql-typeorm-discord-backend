@@ -12,7 +12,11 @@ export class AuthService implements AuthenticationProvider {
   async validateUser(details: UserDetails) {
     const { discordId } = details;
     const user = await this.userRepo.findOne({ discordId });
-    if (user) return user;
+    if (user) {
+      await this.userRepo.update({ discordId }, details);
+      console.log('Updated');
+      return user;
+    }
     return this.createUser(details);
   }
 

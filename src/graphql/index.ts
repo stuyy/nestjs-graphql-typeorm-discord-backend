@@ -15,4 +15,23 @@ export interface User {
     username: string;
     avatar?: string;
     discriminator: string;
+    guilds?: Guild[];
+}
+
+export interface Guild {
+    id: string;
+    name: string;
+    icon?: string;
+    description?: string;
+    banner?: string;
+    owner_id?: string;
+    roles?: Role[];
+}
+
+export interface Role {
+    id: string;
+    name: string;
+    permissions: string;
+    position: number;
+    color: number;
 }

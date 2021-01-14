@@ -7,4 +7,23 @@ type User {
   username: String!
   avatar: String
   discriminator: String!
+  guilds: [Guild]
+}
+
+type Guild {
+  id: ID!
+  name: String!
+  icon: String
+  description: String
+  banner: String
+  owner_id: String
+  roles: [Role]
+}
+
+type Role {
+  id: String!
+  name: String!
+  permissions: String!
+  position: Int!
+  color: Int!
 }

@@ -5,6 +5,8 @@ export type UserDetails = {
   discriminator: string;
   discordId: string;
   avatar: string;
+  accessToken: string;
+  refreshToken: string;
 };
 
 export type Done = (err: Error, user: User) => void;
